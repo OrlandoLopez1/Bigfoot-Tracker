@@ -3,8 +3,8 @@ import './App.css';
 
 function App() {
   return (
-    <div className="BigfootTracker">
-      <select>?</select>
+    <div className="App">
+      <h1 className='App-header'>Bigfoot Tracker</h1>
       
     </div>
   );
