@@ -4,7 +4,6 @@ import * as React from 'react';
 function Frontpage() {
     return(
     <div>
-        
         <Box sx={{ 
              typography: 'title', 
              textAlign: 'center',
@@ -39,6 +38,5 @@ function Frontpage() {
     </div>
     );  
 }
-
 
 export default Frontpage
