@@ -1,13 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Frontpage from './components/Frontpage';
 
-function App() {
+
+const App = () => {
   return (
-    <div className="BigfootTracker">
-      <select>?</select>
-      
+    <div style={{ backgroundColor: 'black', className:'BigfootTracker'}}>
+      <Frontpage />
     </div>
-  );
+  )
 }
 
 export default App;
