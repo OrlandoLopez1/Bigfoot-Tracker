@@ -3,6 +3,7 @@ import { Container } from "@mui/system";
 import * as React from 'react';
 import './Frontpage.css'
 import ImagePopover from './ImagePopover'
+import Map from './Map'
 
 
 const darkTheme = createTheme({
@@ -10,8 +11,6 @@ const darkTheme = createTheme({
         mode: 'dark',
     },
 });
-
-const mapApikey = 'AIzaSyC9vwgqv8LdmoZTw4coPyaqd6MRdDLJkJo';
 
 function Frontpage() {
     return(
@@ -35,8 +34,8 @@ function Frontpage() {
                     <Typography variant="h5" align="center" color="textSecondary" paragraph>
                         Have you ever wondered where Big Foot has traveled?
                     </Typography>
-                    <div>
-                        
+                    <div className="map">
+                        <Map/>
                     </div>
                 </Container>
             </div>
