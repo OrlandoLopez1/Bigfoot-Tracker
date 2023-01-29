@@ -1,3 +1,4 @@
+import { ClassNames } from "@emotion/react";
 import { AppBar, CssBaseline, Toolbar, Typography } from "@mui/material";
 import { Container } from "@mui/system";
 import * as React from 'react';
@@ -5,7 +6,7 @@ import * as React from 'react';
 function Frontpage() {
     return(
     <>
-        <CssBaseline>
+        <CssBaseline enableColorScheme>
         <AppBar position="relative">
             <Toolbar>
                 <Typography variant="h6">
@@ -25,6 +26,11 @@ function Frontpage() {
                 </Container>
             </div>
         </main>
+        <footer>
+            <Typography variant="h6" align="center" gutterBottom>
+                Made by: Lando, Stephen, Noah and Evan
+            </Typography>
+        </footer>
         </CssBaseline>
     </>
     );  
