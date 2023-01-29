@@ -50,7 +50,7 @@ function Frontpage() {
                         <Grid item map>
                             <Item><Map/></Item>
                         </Grid>
-                        <Grid item table>
+                        <Grid item table width={'20%'}>
                             <Item><PredTable/></Item>
                         </Grid>
                     </Grid>
