@@ -1,8 +1,9 @@
-import { AppBar, CssBaseline, Toolbar, Typography, Button, createTheme, ThemeProvider, Popover } from "@mui/material";
+import { AppBar, CssBaseline, Toolbar, Typography, createTheme, ThemeProvider } from "@mui/material";
 import { Container } from "@mui/system";
 import * as React from 'react';
 import './Frontpage.css'
-import bigfoot from '../bigfoot.jpg';
+import ImagePopover from './ImagePopover'
+import Map from './Map'
 import PredTable from './PredTable';
 
 const darkTheme = createTheme({
@@ -10,39 +11,6 @@ const darkTheme = createTheme({
         mode: 'dark',
     },
 });
-
-function ImagePopover() {
-    const [anchorEl, setAnchorEl] = React.useState(null);
-    const handleClick = (event) => {
-        setAnchorEl(event.currentTarget);
-    };
-    const handleClose = () => {
-        setAnchorEl(null);
-    };
-
-    const open = Boolean(anchorEl);
-    const id = open ? 'simple-popover' : undefined;
-
-    return (
-        <div>
-            <Button color="inherit" onClick={handleClick}>
-                Click me!
-            </Button>
-            <Popover
-                id={id}
-                open={open}
-                anchorEl={anchorEl}
-                onClose={handleClose}
-                anchorOrigin={{
-                    vertical: 'bottom',
-                    horizontal: 'left',
-                }}
-            >
-                <img src={bigfoot} alt="bigfoot"/>
-            </Popover>
-        </div>
-    );
-}
 
 function Frontpage() {
     return(
@@ -66,8 +34,11 @@ function Frontpage() {
                     <Typography variant="h5" align="center" color="textSecondary" paragraph>
                         Have you ever wondered where Big Foot has traveled?
                     </Typography>
+                    <div className="map">
+                        <Map/>
+                    </div>
                     <div>
-                    <PredTable/>
+                        <PredTable/>
                     </div>
                    
                 </Container>

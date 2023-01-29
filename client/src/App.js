@@ -1,14 +1,12 @@
 import React from 'react';
 import Frontpage from './components/Frontpage';
 
-
-
 const App = () => {
   return (
     <div>
-    <Frontpage/>
+      <Frontpage/>
     </div>
-  )
+  );
 }
 
 export default App;
