@@ -1,7 +1,7 @@
 {
   "name": "swamphacks2023",
   "version": "0.1.0",
-  "homepage": "https://orlandolopez.github.io/SwampHacks2023/client/",
+  "homepage": "https://orlandolopez1.github.io/SwampHacks2023/client/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.5",
