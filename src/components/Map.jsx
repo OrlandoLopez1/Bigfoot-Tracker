@@ -1,4 +1,4 @@
-import { GoogleMap, MarkerF, useJsApiLoader, MarkerLabel } from '@react-google-maps/api';
+import { GoogleMap, MarkerF, useJsApiLoader } from '@react-google-maps/api';
 import { within } from '@testing-library/react';
 import * as React from 'react';
 
