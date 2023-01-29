@@ -3,6 +3,7 @@ import { Container } from "@mui/system";
 import * as React from 'react';
 import './Frontpage.css'
 import bigfoot from '../bigfoot.jpg';
+import PredTable from './PredTable';
 
 const darkTheme = createTheme({
     palette: {
@@ -66,8 +67,9 @@ function Frontpage() {
                         Have you ever wondered where Big Foot has traveled?
                     </Typography>
                     <div>
-                        
+                    <PredTable/>
                     </div>
+                   
                 </Container>
             </div>
         </main>
