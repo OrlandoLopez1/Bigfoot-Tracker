@@ -1,4 +1,4 @@
-import { AppBar, CssBaseline, Toolbar, Typography, createTheme, ThemeProvider } from "@mui/material";
+import { AppBar, CssBaseline, styled, Paper, Grid, Box, Toolbar, Typography, createTheme, ThemeProvider } from "@mui/material";
 import { Container } from "@mui/system";
 import * as React from 'react';
 import './Frontpage.css'
@@ -11,6 +11,14 @@ const darkTheme = createTheme({
         mode: 'dark',
     },
 });
+
+const Item = styled(Paper)(({ theme }) => ({
+    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+    ...theme.typography.body2,
+    padding: theme.spacing(1),
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+  }));
 
 function Frontpage() {
     return(
@@ -27,21 +35,26 @@ function Frontpage() {
         </AppBar>
         <main>
             <div>
-                <Container maxWidth="sm" className="container">
+                <Container maxWidth="sm">
                     <Typography className="top-header" variant="h2" align="center" color="textPrimary" gutterBottom>
                         Where He Been?
                     </Typography>
                     <Typography variant="h5" align="center" color="textSecondary" paragraph>
                         Have you ever wondered where Big Foot has traveled?
                     </Typography>
-                    <div className="map">
-                        <Map/>
-                    </div>
-                    <div>
-                        <PredTable/>
-                    </div>
-                   
                 </Container>
+            </div>
+            <div>
+                <Box sx={{flexGrow: 1}}>
+                    <Grid container spacing={2} justifyContent="center">
+                        <Grid item map>
+                            <Item><Map/></Item>
+                        </Grid>
+                        <Grid item table>
+                            <Item><PredTable/></Item>
+                        </Grid>
+                    </Grid>
+                </Box>
             </div>
         </main>
         <footer className="footer">
