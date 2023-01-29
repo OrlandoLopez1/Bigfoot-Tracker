@@ -28,6 +28,10 @@ export default function ImagePopover() {
                     vertical: 'bottom',
                     horizontal: 'left',
                 }}
+                transformOrigin={{
+                    vertical: 'top',
+                    horizontal: 'center',
+                }}
             >
                 <img src={bigfoot} alt="bigfoot"/>
             </Popover>
