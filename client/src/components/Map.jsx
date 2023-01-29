@@ -1,6 +1,5 @@
-import { GoogleMap, Marker, useJsApiLoader } from '@react-google-maps/api';
+import { GoogleMap, MarkerF, useJsApiLoader, MarkerLabel } from '@react-google-maps/api';
 import * as React from 'react';
-import { useMemo } from 'react';
 
 const containerStyle = {
     width: '540px',
@@ -12,44 +11,33 @@ const center = {
     lng: -98.5795
 };
 
+
 export default function Map() {
     const { isLoaded } = useJsApiLoader({
         id: 'google-map-script',
         googleMapsApiKey: 'AIzaSyC9vwgqv8LdmoZTw4coPyaqd6MRdDLJkJo',
     });
 
-    const Ohio = useMemo(() => ({lat:40.4173,lng:82.9071}), []);
-    const Maine = useMemo(() => ({lat:45.2538,lng:69.4455}), []);
-    const Washington = useMemo(() => ({lat:47.7511,lng:120.7401}), []);
-    const Florida = useMemo(() => ({lat:27.6648,lng:81.5158}), []);
-    const Texas = useMemo(() => ({lat:31.9686,lng:99.9018}), []);
+    const Michigan = {lat:44.3148,lng:-85.6024};
+    const Virginia = {lat:37.4316,lng:-78.6569};
+    const Illinois = {lat:40.6331 ,lng:-89.3985};
+    const Florida = {lat:27.6648,lng:-81.5158};
+    const Texas = {lat:31.9686,lng:-99.9018};
+    const New_York = {lat:43.2994 ,lng:-74.2179};
 
-    // const [map, setMap] = React.useState(null);
-
-    // const onLoad = React.useCallback(function callback(map) {
-    //     const bounds = new window.google.maps.LatLngBounds(center);
-    //     map.fitBounds(bounds);
-
-    //     setMap(map);
-    // }, []);
-
-    // const onUnmount = React.useCallback(function callback(map) {
-    //     setMap(null);
-    // }, []);
-
-    return isLoaded ? (
+    if (!isLoaded) return (<div>Loading...</div>);
+    else return(
         <GoogleMap
-        zoom={3.6}
-        mapContainerStyle={containerStyle}
-        center={center}
-        //onLoad={onLoad}
-        //onUnmount={onUnmount}
+            zoom={3.6}
+            mapContainerStyle={containerStyle}
+            center={center}
         >
-            <Marker position={Ohio} />
-            <Marker position={Maine} />
-            <Marker position={Washington} />
-            <Marker position={Florida} />
-            <Marker position={Texas} />
+            <MarkerF position={Michigan} label='1' text="yo" />
+            <MarkerF position={Texas} label='2'/>
+            <MarkerF position={Virginia} label='3' />
+            <MarkerF position={Florida} label='4'/>
+            <MarkerF position={Illinois} label='5'/>
+            <MarkerF position={New_York} label='6'/>
         </GoogleMap>
-    ) : <></>
+    );
 }
