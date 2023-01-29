@@ -27,7 +27,12 @@ function createData(state, percentage) {
 }
 
 const rows = [
-  createData('Virginia', 7)
+  createData('Michigan', 10 + '%'),
+  createData('Texas', 8 + '%'),
+  createData('Virginia', 7 + '%'),
+  createData('Florida', 5 + '%'),
+  createData('Illinois', 5 + '%'),
+  createData('New York', 5 + '%')
 ];
 
 export default function PredTable() {
@@ -38,7 +43,7 @@ export default function PredTable() {
         <TableHead>
           <StyledTableRow>
             <StyledTableCell>State</StyledTableCell>
-            <StyledTableCell align="right">Chance of BigFoot?(percentage)</StyledTableCell>
+            <StyledTableCell align="right">Chance of Big Foot?</StyledTableCell>
           </StyledTableRow>
         </TableHead>
         <TableBody>
