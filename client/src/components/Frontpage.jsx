@@ -1,4 +1,4 @@
-import { AppBar, CssBaseline, Toolbar, Typography, Box, createTheme, ThemeProvider } from "@mui/material";
+import { AppBar, CssBaseline, Toolbar, Typography, Button, createTheme, ThemeProvider } from "@mui/material";
 import { Container } from "@mui/system";
 import * as React from 'react';
 import './Frontpage.css'
@@ -16,9 +16,10 @@ function Frontpage() {
         <CssBaseline>
         <AppBar position="relative" className="top-bar">
             <Toolbar>
-                <Typography variant="h6">
+                <Typography variant="h6" component="div" sx={{flexGrow: 1}}>
                     Big Foot Tracker
                 </Typography>
+                <Button color="inherit">Click me!</Button>
             </Toolbar>
         </AppBar>
         <main>
