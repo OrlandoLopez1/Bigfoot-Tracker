@@ -28,7 +28,7 @@ function Frontpage() {
         <AppBar position="relative" className="top-bar">
             <Toolbar>
                 <Typography variant="h6" component="div" sx={{flexGrow: 1}}>
-                    Big Foot Tracker
+                    Bigfoot Tracker
                 </Typography>
                 <ImagePopover></ImagePopover>
             </Toolbar>
@@ -37,10 +37,10 @@ function Frontpage() {
             <div>
                 <Container maxWidth="sm">
                     <Typography className="top-header" variant="h2" align="center" color="textPrimary" gutterBottom>
-                        Where He Been?
+                        Where is Bigfoot?
                     </Typography>
                     <Typography variant="h5" align="center" color="textSecondary" paragraph>
-                        Have you ever wondered where Big Foot has traveled?
+                        Have you ever wondered where Bigfoot has traveled? Explore the map to find out!
                     </Typography>
                 </Container>
             </div>

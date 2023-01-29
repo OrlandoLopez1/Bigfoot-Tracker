@@ -1,6 +1,5 @@
-import { GoogleMap, Marker, useJsApiLoader } from '@react-google-maps/api';
+import { GoogleMap, MarkerF, useJsApiLoader } from '@react-google-maps/api';
 import * as React from 'react';
-import { useMemo } from 'react';
 
 const containerStyle = {
     width: '540px',
@@ -18,38 +17,21 @@ export default function Map() {
         googleMapsApiKey: 'AIzaSyC9vwgqv8LdmoZTw4coPyaqd6MRdDLJkJo',
     });
 
-    const Ohio = useMemo(() => ({lat:40.4173,lng:82.9071}), []);
-    const Maine = useMemo(() => ({lat:45.2538,lng:69.4455}), []);
-    const Washington = useMemo(() => ({lat:47.7511,lng:120.7401}), []);
-    const Florida = useMemo(() => ({lat:27.6648,lng:81.5158}), []);
-    const Texas = useMemo(() => ({lat:31.9686,lng:99.9018}), []);
+    const Ohio = {lat:40.4173,lng:82.9071};
 
-    // const [map, setMap] = React.useState(null);
 
-    // const onLoad = React.useCallback(function callback(map) {
-    //     const bounds = new window.google.maps.LatLngBounds(center);
-    //     map.fitBounds(bounds);
-
-    //     setMap(map);
-    // }, []);
-
-    // const onUnmount = React.useCallback(function callback(map) {
-    //     setMap(null);
-    // }, []);
-
-    return isLoaded ? (
+    if (!isLoaded) return (<div>Loading...</div>);
+    else return(
         <GoogleMap
-        zoom={3.6}
-        mapContainerStyle={containerStyle}
-        center={center}
-        //onLoad={onLoad}
-        //onUnmount={onUnmount}
+            zoom={3.6}
+            mapContainerStyle={containerStyle}
+            center={center}
         >
-            <Marker position={Ohio} />
-            <Marker position={Maine} />
-            <Marker position={Washington} />
-            <Marker position={Florida} />
-            <Marker position={Texas} />
-        </GoogleMap>
-    ) : <></>
+            <MarkerF position={Ohio} />
+        </GoogleMap>);
+
+    // const Maine = useMemo(() => ({lat:45.2538,lng:69.4455}), []);
+    // const Washington = useMemo(() => ({lat:47.7511,lng:120.7401}), []);
+    // const Florida = useMemo(() => ({lat:27.6648,lng:81.5158}), []);
+    // const Texas = useMemo(() => ({lat:31.9686,lng:99.9018}), []);
 }
