@@ -4,9 +4,7 @@ import Frontpage from './components/Frontpage';
 
 const App = () => {
   return (
-    <div style={{ backgroundColor: 'black', className:'BigfootTracker'}}>
-      <Frontpage />
-    </div>
+    <Frontpage/>
   )
 }
 

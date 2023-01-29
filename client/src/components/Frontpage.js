@@ -1,42 +1,33 @@
-import Box from '@mui/material/Box';
+import { AppBar, CssBaseline, Toolbar, Typography } from "@mui/material";
+import { Container } from "@mui/system";
 import * as React from 'react';
 
 function Frontpage() {
     return(
-    <div>
-        <Box sx={{ 
-             typography: 'title', 
-             textAlign: 'center',
-             fontWeight: 'bold',
-             fontFamily: 'monospace',
-             color: 'white',
-             lineHeight: '5',
-             fontSize: 30
-            }}>
-                The BigFoot Tracker
-            </Box>
-        <Box sx={{ 
-             typography: 'body1',
-             textAlign: 'center',
-             fontFamily: 'monospace',
-             color: 'white',
-             lineHeight: '5',
-             fontWeight: 'bold'
-         }}>
-            Where He Been:
-        </Box>
-        <Box sx={{
-             typography: 'body1',
-             textAlign: 'center',
-             fontFamily: 'monospace',
-             color: 'white',
-             lineHeight: '40',
-             fontWeight: 'bold'
-             }}>
-            Where He Might Be:
-        </Box>
-    </div>
+    <>
+        <CssBaseline>
+        <AppBar position="relative">
+            <Toolbar>
+                <Typography variant="h6">
+                    Big Foot Tracker
+                </Typography>
+            </Toolbar>
+        </AppBar>
+        <main>
+            <div>
+                <Container maxWidth="sm">
+                    <Typography variant="h2" align="center" color="textPrimary" gutterBottom>
+                        Where He Been?
+                    </Typography>
+                    <Typography variant="h5" align="center" color="textSecondary" paragraph>
+                        Have you ever wondered where Big Foot has traveled?
+                    </Typography>
+                </Container>
+            </div>
+        </main>
+        </CssBaseline>
+    </>
     );  
 }
 
-export default Frontpage
+export default Frontpage;
