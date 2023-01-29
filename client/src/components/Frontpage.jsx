@@ -4,7 +4,7 @@ import * as React from 'react';
 import './Frontpage.css'
 import ImagePopover from './ImagePopover'
 import Map from './Map'
-
+import PredTable from './PredTable';
 
 const darkTheme = createTheme({
     palette: {
@@ -37,6 +37,10 @@ function Frontpage() {
                     <div className="map">
                         <Map/>
                     </div>
+                    <div>
+                        <PredTable/>
+                    </div>
+                   
                 </Container>
             </div>
         </main>
