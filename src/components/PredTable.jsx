@@ -3,7 +3,7 @@ import { DataGrid } from '@mui/x-data-grid';
 
 const columns = [
   { field: 'id', headerName: 'State', sortable: false, width: 105 },
-  { field: 'percentage', headerName: 'Chance of Big Foot', sortable: false, width: 135 },
+  { field: 'percentage', headerName: 'Chance of Big Foot', sortable: false, width: 140 },
   
  
   
