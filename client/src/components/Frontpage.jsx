@@ -1,13 +1,47 @@
-import { AppBar, CssBaseline, Toolbar, Typography, Button, createTheme, ThemeProvider } from "@mui/material";
+import { AppBar, CssBaseline, Toolbar, Typography, Button, createTheme, ThemeProvider, Popover } from "@mui/material";
 import { Container } from "@mui/system";
 import * as React from 'react';
 import './Frontpage.css'
+import bigfoot from '../bigfoot.jpg';
 
 const darkTheme = createTheme({
     palette: {
         mode: 'dark',
     },
 });
+
+function ImagePopover() {
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
+
+    const open = Boolean(anchorEl);
+    const id = open ? 'simple-popover' : undefined;
+
+    return (
+        <div>
+            <Button color="inherit" onClick={handleClick}>
+                Click me!
+            </Button>
+            <Popover
+                id={id}
+                open={open}
+                anchorEl={anchorEl}
+                onClose={handleClose}
+                anchorOrigin={{
+                    vertical: 'bottom',
+                    horizontal: 'left',
+                }}
+            >
+                <img src={bigfoot} alt="bigfoot"/>
+            </Popover>
+        </div>
+    );
+}
 
 function Frontpage() {
     return(
@@ -19,7 +53,7 @@ function Frontpage() {
                 <Typography variant="h6" component="div" sx={{flexGrow: 1}}>
                     Big Foot Tracker
                 </Typography>
-                <Button color="inherit">Click me!</Button>
+                <ImagePopover></ImagePopover>
             </Toolbar>
         </AppBar>
         <main>
