@@ -1,4 +1,4 @@
-import { GoogleMap, MarkerF, useJsApiLoader } from '@react-google-maps/api';
+import { GoogleMap, MarkerF, useJsApiLoader, MarkerLabel } from '@react-google-maps/api';
 import * as React from 'react';
 
 const containerStyle = {
@@ -18,11 +18,12 @@ export default function Map() {
         googleMapsApiKey: 'AIzaSyC9vwgqv8LdmoZTw4coPyaqd6MRdDLJkJo',
     });
 
-    const Ohio = {lat:40.4173,lng:-82.9071};
-    const Maine = {lat:45.2538,lng:-69.4455};
-    const Washington = {lat:47.7511,lng:-120.7401};
+    const Michigan = {lat:44.3148,lng:-85.6024};
+    const Virginia = {lat:37.4316,lng:-78.6569};
+    const Illinois = {lat:40.6331 ,lng:-89.3985};
     const Florida = {lat:27.6648,lng:-81.5158};
     const Texas = {lat:31.9686,lng:-99.9018};
+    const New_York = {lat:43.2994 ,lng:-74.2179};
 
     if (!isLoaded) return (<div>Loading...</div>);
     else return(
@@ -31,11 +32,12 @@ export default function Map() {
             mapContainerStyle={containerStyle}
             center={center}
         >
-            <MarkerF position={Ohio} />
-            <MarkerF position={Maine} />
-            <MarkerF position={Washington} />
-            <MarkerF position={Florida} />
-            <MarkerF position={Texas} />
+            <MarkerF position={Michigan} label='1' text="yo" />
+            <MarkerF position={Texas} label='2'/>
+            <MarkerF position={Virginia} label='3' />
+            <MarkerF position={Florida} label='4'/>
+            <MarkerF position={Illinois} label='5'/>
+            <MarkerF position={New_York} label='6'/>
         </GoogleMap>
     );
 }
