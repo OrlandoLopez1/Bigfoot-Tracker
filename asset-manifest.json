@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/SwampHacks2023/client/static/css/main.bddb8601.css",
+    "main.js": "/SwampHacks2023/client/static/js/main.debdae76.js",
+    "static/js/787.b497e105.chunk.js": "/SwampHacks2023/client/static/js/787.b497e105.chunk.js",
+    "static/media/bigfoot.jpg": "/SwampHacks2023/client/static/media/bigfoot.24d5764c7074bc420193.jpg",
+    "index.html": "/SwampHacks2023/client/index.html",
+    "main.bddb8601.css.map": "/SwampHacks2023/client/static/css/main.bddb8601.css.map",
+    "main.debdae76.js.map": "/SwampHacks2023/client/static/js/main.debdae76.js.map",
+    "787.b497e105.chunk.js.map": "/SwampHacks2023/client/static/js/787.b497e105.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bddb8601.css",
+    "static/js/main.debdae76.js"
+  ]
+}
