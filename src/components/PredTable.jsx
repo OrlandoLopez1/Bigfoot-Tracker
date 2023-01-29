@@ -2,8 +2,8 @@ import * as React from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 
 const columns = [
-  { field: 'id', headerName: 'State', width: 105 },
-  { field: 'percentage', headerName: 'Chance of Big Foot', width: 135 },
+  { field: 'id', headerName: 'State', sortable: false, width: 105 },
+  { field: 'percentage', headerName: 'Chance of Big Foot', sortable: false, width: 140 },
   
  
   
@@ -38,11 +38,11 @@ const rows = [
   { id: 'Iowa', percentage: 1 + '%' },
   { id: 'Kansas', percentage: 1 + '%' },
   { id: 'Maryland', percentage: 1 + '%' },
-  { id: 'Michigan', percentage: 1 + '%' },
   { id: 'Mississippi', percentage: 1 + '%' },
   { id: 'New Hampshire', percentage: 1 + '%' },
   { id: 'North Dakota', percentage: 1 + '%' },
   { id: 'Oklahoma', percentage: 1 + '%' },
+  { id: 'South Carolina', percentage: 1 + '%' },
   { id: 'Vermont', percentage: 1 + '%' },
   { id: 'Wyoming', percentage: 1 + '%' },
   { id: 'Arizona', percentage: 0 + '%' },
@@ -62,9 +62,9 @@ const rows = [
   { id: 'Utah', percentage: 0 + '%' },
 ];
 
-export default function DataTable() {
+export default function PredTable() {
   return (
-    <div style={{ height: 400, width: '150%' }}>
+    <div style={{ height: 400, width: '100%' }}>
       <DataGrid
         rows={rows}
         columns={columns}

@@ -46,11 +46,11 @@ function Frontpage() {
             </div>
             <div>
                 <Box sx={{flexGrow: 1}}>
-                    <Grid container spacing={2} justifyContent="center">
+                    <Grid container spacing={1} justifyContent="center">
                         <Grid item map>
                             <Item><Map/></Item>
                         </Grid>
-                        <Grid item table>
+                        <Grid item table width={'20%'}>
                             <Item><PredTable/></Item>
                         </Grid>
                     </Grid>
