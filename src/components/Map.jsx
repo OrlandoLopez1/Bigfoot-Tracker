@@ -53,7 +53,7 @@ export default function Map() {
     const OK = {lat:35.0078 ,lng:-97.0929};
     const SC = {lat:33.8361 ,lng:-81.1637};
     const VM = {lat:44.5588 ,lng:-72.5778};
-    const WY = {lat:39.0458 ,lng:-76.6413};
+    const WY = {lat:43.0760 ,lng:-107.2903};
     const AZ = {lat:34.0489 ,lng:-111.0937};
     const CN = {lat:41.6032 ,lng:-73.0877};
     const DL = {lat:38.9108 ,lng:-75.5277};
