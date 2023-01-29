@@ -5,6 +5,7 @@ import './Frontpage.css'
 import ImagePopover from './ImagePopover'
 import Map from './Map'
 import PredTable from './PredTable';
+import logo from '../logo192.png';
 
 const darkTheme = createTheme({
     palette: {
@@ -27,7 +28,8 @@ function Frontpage() {
         <CssBaseline>
         <AppBar position="relative" className="top-bar">
             <Toolbar>
-                <Typography variant="h6" component="div" sx={{flexGrow: 1}}>
+                <img src={logo} alt="logo"/>
+                <Typography variant="h6" component="div" sx={{p: 2, flexGrow: 1}}>
                     Bigfoot Tracker
                 </Typography>
                 <ImagePopover></ImagePopover>
@@ -37,7 +39,7 @@ function Frontpage() {
             <div>
                 <Container maxWidth="sm">
                     <Typography className="top-header" variant="h2" align="center" color="textPrimary" gutterBottom>
-                        Where is Bigfoot?
+                        Where's Bigfoot?
                     </Typography>
                     <Typography variant="h5" align="center" color="textSecondary" paragraph>
                         Have you ever wondered where Bigfoot has traveled? Explore the map to find out!
