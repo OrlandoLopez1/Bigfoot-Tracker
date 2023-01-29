@@ -1,5 +1,6 @@
-import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
+import { GoogleMap, Marker, useJsApiLoader } from '@react-google-maps/api';
 import * as React from 'react';
+import { useMemo } from 'react';
 
 const containerStyle = {
     width: '540px',
@@ -16,6 +17,12 @@ export default function Map() {
         id: 'google-map-script',
         googleMapsApiKey: 'AIzaSyC9vwgqv8LdmoZTw4coPyaqd6MRdDLJkJo',
     });
+
+    const Ohio = useMemo(() => ({lat:40.4173,lng:82.9071}), []);
+    const Maine = useMemo(() => ({lat:45.2538,lng:69.4455}), []);
+    const Washington = useMemo(() => ({lat:47.7511,lng:120.7401}), []);
+    const Florida = useMemo(() => ({lat:27.6648,lng:81.5158}), []);
+    const Texas = useMemo(() => ({lat:31.9686,lng:99.9018}), []);
 
     // const [map, setMap] = React.useState(null);
 
@@ -38,6 +45,11 @@ export default function Map() {
         //onLoad={onLoad}
         //onUnmount={onUnmount}
         >
+            <Marker position={Ohio} />
+            <Marker position={Maine} />
+            <Marker position={Washington} />
+            <Marker position={Florida} />
+            <Marker position={Texas} />
         </GoogleMap>
     ) : <></>
 }
